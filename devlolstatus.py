@@ -8,7 +8,7 @@ def application(environ, start_response):
 
         def get_state():
            try:
-             reponse = urllib2.urlopen('http://mars.zauberfisch.at/devlol/status.php','',10)
+             reponse = urllib2.urlopen('http://mars.zauberfisch.at/devlol/status.php',data=None,timeout=10)
              answer = reponse.read()
              #strip html
              answer = re.sub('<[^<]+?>', '', answer)
